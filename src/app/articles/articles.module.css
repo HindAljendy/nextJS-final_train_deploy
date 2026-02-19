@@ -1,0 +1,253 @@
+.All_articles {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+
+/* open_article styling : */
+.open_article {
+    margin-top: 20px;
+    max-width: 75%;
+}
+
+
+@media screen and (max-width:992px) {
+    .open_article {
+        max-width: 100%;
+    }
+}
+
+/* Single Article Page Style CSS : */
+.single_article {
+    background-color: rgb(163, 106, 106);
+    padding: 28px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.open_article p.warning {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: red;
+}
+
+.single_article .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single_article .info h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.single_article .info span {
+    color: #9ca3af;
+}
+
+.single_article p {
+    color: #1f2937;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+
+.open_article .title_comments {
+    font-size: 1.25rem;
+    color: #374151;
+    padding-left: 0.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1.75rem;
+}
+
+
+
+
+
+/* Articles Loading Page : */
+.ArticlesLoading {
+    animation: animate-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes animate-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* القسم الاول */
+.ArticlesLoading .searchForm_style {
+    margin: 20px auto;
+    width: 70%;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #d1d5db;
+    height: 3rem;
+}
+
+/* القسم الثاني */
+.ArticlesLoading .allArticles_style {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.ArticlesLoading .allArticles_style .articleItem_style {
+    background-color: #E5E7EB;
+    width: 25%;
+    padding: 20px;
+    border-radius: 8px;
+    margin-block: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border: 2px solid #9ca3af;
+}
+
+.ArticlesLoading .allArticles_style .articleItem_style h3 {
+    height: 24px;
+    background-color: #d1d5db;
+}
+
+.ArticlesLoading .allArticles_style .articleItem_style p {
+    background-color: #d1d5db;
+    margin-block: 0.5rem;
+    padding: 0.25rem;
+    height: 40px;
+}
+
+.ArticlesLoading .allArticles_style .articleItem_style .buttonLink {
+    width: 100%;
+    display: block;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    background-color: #9CA3AF;
+    height: 32px;
+}
+
+/* القسم الثالث */
+.ArticlesLoading .articlesPagination_style {
+    max-width: 30%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2.5rem;
+}
+
+.ArticlesLoading .articlesPagination_style .paginate_style {
+    background-color: #d1d5db;
+    height: 32px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* SearchArticlePage Styling */
+.SearchArticlePage h3.title_searchText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.SearchArticlePage h3 span.searchText {
+    padding-inline: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+.SearchArticlePage h3 span.searchText_notFound {
+    padding-inline: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+
+.SearchArticlePage .All_articles_searchText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* Single Article Loading Page : */
+.SingleArticleLoading {
+    animation: animate-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+}
+
+.SingleArticleLoading .single_article_style {
+    margin: 20px auto;
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.SingleArticleLoading .single_article_style h1 {
+    background-color: #d1d5db;
+    margin-block: 10px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+.SingleArticleLoading .single_article_style>div {
+    background-color: #d1d5db;
+    height: 15px;
+    border-radius: 8px;
+}
+
+.SingleArticleLoading .single_article_style p {
+    background-color: #d1d5db;
+    height: 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.SingleArticleLoading .add_comment_style {
+    width: 70%;
+    margin: 32px auto;
+}
+
+.SingleArticleLoading .add_comment_style>div {
+    background-color: #d1d5db;
+    height: 32px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.SingleArticleLoading .add_comment_style button {
+    background-color: #d1d5db;
+    padding: 0.25rem;
+    border-radius: 8px;
+    height: 32px;
+    width: 5rem;
+    border: none;
+    cursor: pointer;
+}
