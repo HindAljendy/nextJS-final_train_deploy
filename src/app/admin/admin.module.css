@@ -1,0 +1,321 @@
+/* layout admin styling : */
+.layoutAdmin {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.layoutAdmin .container_sidebar {
+    width: 20%;
+    padding: 1.25rem;
+    background-color: #7c3aed;
+    color: #ffffff;
+
+    transition: all 300ms ease-in-out;
+}
+
+.layoutAdmin .container_content {
+    width: 80%;
+    overflow-y: scroll;
+}
+
+/* Responsive */
+@media screen and (max-width:1080px) {
+    .layoutAdmin .container_sidebar {
+        width: 60px;
+        padding: 0.25rem;
+    }
+
+    .layoutAdmin .container_content {
+        width: 100%;
+    }
+}
+
+/* Admin SideBar Styling : */
+.admin_sidebar .dashboard_link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.admin_sidebar .icon {
+    margin-right: 0.25rem;
+}
+
+.admin_sidebar span {
+    display: block;
+}
+
+.admin_sidebar ul {
+    margin-top: 40px;
+}
+
+.admin_sidebar ul li a {
+    width: fit-content;
+    border-bottom: 1px solid #D1D5DB;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.admin_sidebar ul li a:hover {
+    border-color: #FBBF24;
+    color: #FBBF24;
+}
+
+/* Responsive */
+@media screen and (max-width:1080px) {
+    .admin_sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .admin_sidebar span {
+        display: none;
+    }
+
+    .admin_sidebar ul li a {
+        border-bottom: none;
+    }
+}
+
+/* Admin Page Styling : */
+.admin_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_page .container_formAddArticle {
+    width: 100%;
+    padding: 30px;
+    background-color: #c7d2fe;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.admin_page .container_formAddArticle h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #4B5563;
+    margin-bottom: 16px;
+}
+
+.admin_page .container_formAddArticle form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin_page .container_formAddArticle form input {
+    margin-bottom: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.admin_page .container_formAddArticle form textarea {
+    resize: none;
+    margin-bottom: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.admin_page .container_formAddArticle form button {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #1D4ED8;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width:1080px) {
+    .admin_page {
+        padding-inline: 20px;
+    }
+
+    .admin_page .container_formAddArticle h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* AdminArticlesTable_page CSS Styling : */
+.AdminArticlesTable_page h1 ,
+.AdminCommmentsTable_page h1 {
+    padding-top: 12px;
+    margin-bottom: 28px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.AdminArticlesTable_page table , 
+.AdminCommmentsTable_page table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.AdminArticlesTable_page table thead tr , 
+.AdminCommmentsTable_page table thead tr {
+    border-top: 2px solid #6B7280;
+    border-bottom: 2px solid #6B7280;
+    font-size: 20px;
+}
+
+.AdminArticlesTable_page table thead tr th , 
+.AdminCommmentsTable_page table thead tr th  {
+    padding: 4px;
+}
+
+.AdminArticlesTable_page table .show  , 
+.AdminCommmentsTable_page table .show{
+    display: block;
+}
+
+
+.AdminArticlesTable_page table tbody tr ,
+.AdminCommmentsTable_page table tbody tr {
+    border-top: 1px solid #D1D5DB;
+    border-bottom: 1px solid #D1D5DB;
+    font-size: 15px;
+}
+
+.AdminArticlesTable_page table tbody tr td ,
+.AdminCommmentsTable_page table tbody tr  td{
+    padding: 12px;
+    color: #374151;
+}
+
+
+.AdminArticlesTable_page table tbody td a.edit,
+.AdminArticlesTable_page table tbody td a.readMore {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #16a34a;
+    color: white;
+    border-radius: 8px;
+    padding-block: 4px;
+    padding-inline: 8px;
+    margin-right: 8px;
+
+    transition: all 0.5s ease;
+}
+
+.AdminArticlesTable_page table tbody td a.edit:hover {
+    background-color: #166534;
+}
+
+.AdminArticlesTable_page table tbody td a.readMore {
+    background-color: #2563eb;
+    padding: 8px;
+    margin-right: 0px;
+}
+
+.AdminArticlesTable_page table tbody a.readMore:hover {
+    background-color: #1e40af;
+}
+
+
+@media screen and (max-width:767px) {
+    .AdminArticlesTable_page table .show  ,
+    .AdminCommmentsTable_page table .show  {
+        display: none;
+    }
+
+    .AdminArticlesTable_page table tbody tr td.show , 
+    .AdminCommmentsTable_page  table tbody tr td.show {
+        padding: 0px;
+    }
+}
+
+/* Delete Button Styling Css : */
+.AdminArticlesTable_page .delete  , 
+.AdminCommmentsTable_page .delete{
+    display: inline-block;
+    background-color: #dc2626;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    padding-block: 4px;
+    padding-inline: 8px;
+    transition: background-color 0.3s; 
+}
+
+.AdminArticlesTable_page .delete:hover ,
+.AdminCommmentsTable_page .delete:hover{
+    background-color: #9b1d20;
+}
+
+
+/* AdminEditArticle_page CSS Styling : */
+.AdminEditArticle_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminEditArticle_page .container_formEditArticle {
+    width: 100%;
+    padding: 30px;
+    background-color: #e8e0e9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.AdminEditArticle_page .container_formEditArticle h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #4B5563;
+    margin-bottom: 16px;
+}
+
+.AdminEditArticle_page .container_formEditArticle form {
+    display: flex;
+    flex-direction: column;
+}
+
+.AdminEditArticle_page .container_formEditArticle form input {
+    margin-bottom: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.AdminEditArticle_page .container_formEditArticle form textarea {
+    resize: none;
+    margin-bottom: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.AdminEditArticle_page .container_formEditArticle form button {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #16a34a;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+

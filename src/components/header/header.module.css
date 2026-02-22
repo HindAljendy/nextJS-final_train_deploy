@@ -1,0 +1,111 @@
+.header {
+    width: 100%;
+    height: 100px;
+    padding: 0 40px;
+    background-color: rgb(227, 225, 225);
+    border-bottom: 4px solid rgb(144, 144, 144);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.header .navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(176, 15, 176);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.header .navbar .navlinks {
+    margin-left: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header .navbar .navlinks li a {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.header .navbar .navlinks li a:hover {
+    color: darkblue;
+}
+
+.header .right_header ul {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header .right_header ul .userName {
+    color: darkblue;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.header .right_header ul .btn {
+    cursor: pointer;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.6s;
+}
+
+.header .right_header ul .btn:hover {
+    background-color: darkblue;
+}
+
+/* Responsive */
+@media screen and (max-width:1080px) {
+    .hamburger {
+        display: block;
+    }
+
+    .header .navbar .logo {
+        display: none;
+    }
+
+    .header .navbar .navLinksWrapper {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        background-color: rgb(227, 225, 225);
+        transition: all .5s ease-in;
+        z-index: 100;
+    }
+
+    .header .navbar .navLinksWrapper .navlinks {
+        margin-left: 0;
+        padding-left: 40px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

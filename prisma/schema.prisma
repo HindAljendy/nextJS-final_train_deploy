@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/**
+ * creating Models
+ */
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  username  String    @db.VarChar(100)
+  isAdmin   Boolean   @default(false)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  comments  Comment[]
+}
+
+
+
+model Article {
+  id          Int       @id @default(autoincrement())
+  title       String    @db.VarChar(200)
+  description String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  comments    Comment[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  text      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  articleId Int
+  userId    Int
+
+  // oneToMany between article , comment
+  article Article @relation(fields: [articleId], references: [id] , onDelete: Cascade)
+
+  // oneToMany between user , comment
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

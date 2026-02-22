@@ -1,0 +1,120 @@
+/* ArticleItem Styling : */
+.article {
+    width: 25%;
+    padding: 20px;
+    border-radius: 8px;
+    margin-block: 4px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    border: 2px solid #9ca3af;
+
+    transition: all 0.5s ease-in;
+}
+
+.article:hover {
+    background-color: #e2e8f0;
+}
+
+.article h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* line-clamp: 1; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article p {
+    margin-block: 0.5rem;
+    font-size: 1.25rem;
+    color: #374151;
+    padding: 0.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: #6B21A8;
+    padding: 0.25rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.article a:hover {
+    background-color: #7f5fb1;
+}
+
+
+/* Responsive : */
+@media screen and (max-width: 768px) {
+    .article {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .article {
+        width: 100%;
+    }
+}
+
+/* search_input_article Styling */
+.search_input_article {
+    margin: 0 auto;
+    padding-block: 20px;
+    width: 70%;
+}
+
+.search_input_article input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    border: none;
+    color: #1f2937;
+}
+
+/* Responsive : */
+@media screen and (max-width: 768px) {
+    .search_input_article {
+        width: 100%;
+    }
+}
+
+
+/* pagination_articles Styling : */
+.pagination_articles{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding-block: 2.5rem; 
+}
+.pagination_articles .page_num{
+    border: 1px solid #374151; 
+    color: #374151;
+    padding-block:  0.25rem;
+    padding-inline:  0.75rem; 
+    font-weight: bold; 
+    font-size: 1.25rem; 
+    cursor: pointer; 
+
+    transition: all 0.2s ease-in-out; 
+}
+.pagination_articles .page_num:hover{
+    background-color:#e5e7eb;
+}
+
+.pagination_articles .active{
+    background-color: #b9bdc2;
+}
